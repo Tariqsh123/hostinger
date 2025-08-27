@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- Google Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
 
      <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,26 +14,27 @@
 
     
 <nav class="navbar navbar-expand-lg sticky-top">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="Logo" style="height:80px;">
-      </a>
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand me-4" href="#">
+      <img src="images/logo.png" alt="Logo" style="height:80px;">
+    </a>
 
-      <!-- Mobile toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Mobile toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Nav Items -->
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
-
-          <!-- Services Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-            <ul class="dropdown-menu">
+    <!-- Nav Items -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <!-- 👇 remove mx-auto, add me-auto to push right button -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        
+        <!-- Services Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu services-dropdown">
               <!-- 1 -->
                 <li>
                 <a class="dropdown-item" href="#">
@@ -151,7 +148,7 @@
               <!-- 12 -->
                <li>
                 <a class="dropdown-item" href="#">
-                  <img src="https://img.icons8.com/?size=100&id=8vCOhx2sqAbD&format=png&color=5025d1" alt="">
+                  <img src="https://img.icons8.com/?size=100&id=LKGP8O2pAlRS&format=png&color=5025d1" alt="">
                   <div>
                     Dashboard Design & Development
                     <p>We design and develop intuitive dashboards</p>
@@ -162,10 +159,10 @@
             </ul>
           </li>
 
-          <!-- Explore Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Explore</a>
-            <ul class="dropdown-menu">
+        <!-- Explore Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Explore</a>
+          <ul class="dropdown-menu">
               <!-- 1 -->
                 <li>
                 <a class="dropdown-item" href="#">
@@ -200,10 +197,11 @@
             </ul>
           </li>
 
-          <!-- Support Dropdown -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Support</a>
-            <ul class="dropdown-menu">
+   
+        <!-- Support Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Support</a>
+          <ul class="dropdown-menu">
               <!-- 1 -->
                 <li>
                 <a class="dropdown-item" href="#">
@@ -238,13 +236,13 @@
             </ul>
           </li>
 
-          <li class="nav-item"><a class="nav-link" href="#">Horizons</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Horizons</a></li>
         </ul>
 
         <!-- Right Button -->
-        <form class="d-flex">
-          <button class="btn btn-custom" type="button">Get Started</button>
-        </form>
+       <form class="d-flex">
+        <button class="btn btn-custom" type="button">Get Started</button>
+      </form>
       </div>
     </div>
   </nav>
@@ -256,12 +254,12 @@
       
       <!-- Left Text -->
       <div class="col-lg-6 col-md-12">
-        <h2>Professional <span>Web Development</span> Services</h2>
-        <h1>Build Modern & Scalable Websites</h1>
+        <h2>Designs That <span> Connect</span></h2>
+        <h1>Leading Global UX Design Agency</h1>
         <ul>
-          <li>Responsive & user-friendly design</li>
-          <li>Custom solutions for every business</li>
-          <li>Ongoing support & maintenance</li>
+          <li>User-First Designs</li>
+          <li>Global Expertise</li>
+          <li>Proven Results</li>
         </ul>
         <a href="#" class="btn-start">Get Started</a>
       </div>
@@ -278,79 +276,63 @@
 <!-- Pricing Section -->
 <section class="pricing-section py-5">
   <div class="container">
-    <h1 class="text-center mb-3">Choose Your Web Development Plan</h1>
-    <p class="text-center mb-5">Get your website online quickly with our expert development packages.</p>
+    <h1 class="text-center mb-3">What We Provide</h1>
+    <p class="text-center mb-5">Complete digital solutions tailored to your business needs.</p>
 
     <div class="row g-4 justify-content-center">
 
-      <!-- Basic Plan -->
+      <!-- Website Development -->
       <div class="col-sm-6 col-md-4">
         <div class="pricing-card h-100 position-relative">
-          <div class="badge-discount">50% OFF</div>
-          <h3>Basic</h3>
-          <p class="plan-desc">Perfect for small personal or business websites</p>
-          <div class="price">US$ 199 <span>/project</span></div>
-          <p class="price-info">Responsive design, SEO-friendly, and fast delivery. Ideal for startups.</p>
+          <h3>Website Development</h3>
+          <p class="plan-desc">Modern, responsive, and scalable websites for businesses of all sizes.</p>
+          <p class="price-info">We build websites that are SEO-friendly, secure, and optimized for speed.</p>
           <ul>
-            <li>Up to 5 pages</li>
-            <li>Basic SEO optimization</li>
-            <li>Contact form integration</li>
-            <li>Mobile-friendly responsive design</li>
-            <li>Basic security setup & SSL</li>
-            <li>1-month post-launch support</li>
+            <li>Custom & responsive design</li>
+            <li>E-commerce & CMS integration</li>
+            <li>SEO & performance optimization</li>
+            <li>Secure hosting & SSL setup</li>
+            <li>Ongoing maintenance & updates</li>
           </ul>
-          <p class="benefits">Includes domain setup guidance, SSL integration, and 1-month free support</p>
-          <a href="#" class="choose-btn">Choose plan</a>
+          <p class="benefits">Delivering websites that connect brands with their audience.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
         </div>
       </div>
 
-      <!-- Professional Plan -->
+      <!-- App Development -->
       <div class="col-sm-6 col-md-4">
         <div class="pricing-card h-100 position-relative popular">
-          <div class="badge-discount">60% OFF</div>
-          <div class="most-popular">MOST POPULAR</div>
-          <h3>Professional</h3>
-          <p class="plan-desc">Ideal for growing businesses & eCommerce websites</p>
-          <div class="price">US$ 399 <span>/project</span></div>
-          <p class="price-info">Fully responsive, SEO optimized, and fast loading with CMS integration.</p>
+          <div class="most-popular">MOST DEMANDED</div>
+          <h3>App Development</h3>
+          <p class="plan-desc">High-performing mobile apps for Android and iOS platforms.</p>
+          <p class="price-info">Our apps combine sleek design with powerful functionality.</p>
           <ul>
-            <li>Up to 15 pages</li>
-            <li>Custom design & layout</li>
-            <li>E-commerce integration (optional)</li>
-            <li>Mobile-friendly responsive design</li>
-            <li>Blog & content management system</li>
-            <li>Social media integration</li>
-            <li>Analytics & tracking setup</li>
-            <li>Basic security setup & SSL</li>
-            <li>3-month post-launch support</li>
+            <li>Native & cross-platform apps</li>
+            <li>User-focused UI/UX design</li>
+            <li>API & third-party integrations</li>
+            <li>Scalable cloud-based solutions</li>
+            <li>Post-launch updates & support</li>
           </ul>
-          <p class="benefits">Includes everything in Basic + blog setup, analytics integration, 3-month support</p>
-          <a href="#" class="choose-btn">Choose plan</a>
+          <p class="benefits">Creating mobile apps that engage users and grow businesses.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
         </div>
       </div>
 
-      <!-- Enterprise Plan -->
+      <!-- Software Development -->
       <div class="col-sm-6 col-md-4">
         <div class="pricing-card h-100 position-relative">
-          <div class="badge-discount">70% OFF</div>
-          <h3>Enterprise</h3>
-          <p class="plan-desc">Complete solution for large websites & online businesses</p>
-          <div class="price">US$ 799 <span>/project</span></div>
-          <p class="price-info">Custom features, advanced SEO, and premium support included.</p>
+          <h3>Software Development</h3>
+          <p class="plan-desc">Custom-built software solutions designed to fit your workflow.</p>
+          <p class="price-info">From enterprise systems to cloud apps, we cover it all.</p>
           <ul>
-            <li>Unlimited pages</li>
-            <li>Advanced SEO & performance optimization</li>
-            <li>Custom web applications & APIs</li>
-            <li>Mobile & tablet optimized</li>
-            <li>Advanced security & SSL</li>
-            <li>E-commerce & payment gateway integration</li>
-            <li>Blog, portfolio, & CMS integration</li>
-            <li>Analytics, tracking, & marketing tools</li>
-            <li>Dedicated project manager</li>
-            <li>6-month post-launch premium support</li>
+            <li>Enterprise-grade applications</li>
+            <li>Cloud & desktop solutions</li>
+            <li>Database design & management</li>
+            <li>Custom APIs & integrations</li>
+            <li>Dedicated support & scaling</li>
           </ul>
-          <p class="benefits">Everything in Professional + dedicated project manager, priority support, long-term maintenance</p>
-          <a href="#" class="choose-btn">Choose plan</a>
+          <p class="benefits">Powerful software that streamlines business operations.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
         </div>
       </div>
 
@@ -359,10 +341,293 @@
 </section>
 
 
+
 <!-- Choose -->
- 
+<!-- Services Section -->
+<section id="choose-services" class="py-5 bg-white">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="text-black fw-bold mb-2">Our Services Type</h2>
+    <p class="text-muted mb-4">Explore the range of professional services we offer to help your business grow.</p>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="choose-services-tabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Web Development Services</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="app-tab" data-bs-toggle="tab" data-bs-target="#app" type="button" role="tab">App Development Services</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="design-tab" data-bs-toggle="tab" data-bs-target="#design" type="button" role="tab">Design & UX Services</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="software-tab" data-bs-toggle="tab" data-bs-target="#software" type="button" role="tab">Software Development Services</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="choose-services-content">
+
+      <!-- Web Development -->
+      <div class="tab-pane fade show active" id="web" role="tabpanel">
+        <div class="choose-card-container">
+          <!-- Card -->
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=9918&format=png&color=5025d1" class="card-img-top" alt="Website Development">
+            <div class="card-body">
+              <h5 class="card-title">Website Development</h5>
+              <p class="card-text">Build responsive and modern websites tailored to your business needs.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=1349&format=png&color=5025d1" class="card-img-top" alt="Website Revamp">
+            <div class="card-body">
+              <h5 class="card-title">Website Revamp</h5>
+              <p class="card-text">Upgrade your existing site with a fresh look and improved performance.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=47244&format=png&color=5025d1" class="card-img-top" alt="Website Audit">
+            <div class="card-body">
+              <h5 class="card-title">Website Audit</h5>
+              <p class="card-text">Analyze your website performance and get recommendations for improvement.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=wzm7F3RJXm01&format=png&color=5025d1" class="card-img-top" alt="E-commerce Store Development">
+            <div class="card-body">
+              <h5 class="card-title">E-commerce Store Development</h5>
+              <p class="card-text">Launch your online store with powerful features and modern design.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=UbAOCJARZDAP&format=png&color=5025d1" class="card-img-top" alt="Shopify Store Creation">
+            <div class="card-body">
+              <h5 class="card-title">Shopify Store Creation</h5>
+              <p class="card-text">Build and customize your Shopify store for seamless selling.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- App Development -->
+      <div class="tab-pane fade" id="app" role="tabpanel">
+        <div class="choose-card-container">
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=wnWsNQZNTRgz&format=png&color=5025d1" class="card-img-top" alt="App Design">
+            <div class="card-body">
+              <h5 class="card-title">App Design</h5>
+              <p class="card-text">Design intuitive and engaging app interfaces for users.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=aghhDejBO0Am&format=png&color=5025d1" class="card-img-top" alt="App Development">
+            <div class="card-body">
+              <h5 class="card-title">App Development</h5>
+              <p class="card-text">Develop scalable and efficient mobile apps for Android & iOS.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design & UX -->
+      <div class="tab-pane fade" id="design" role="tabpanel">
+        <div class="choose-card-container">
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=TNMFlPDNS18k&format=png&color=5025d1" class="card-img-top" alt="UI/UX Design">
+            <div class="card-body">
+              <h5 class="card-title">UI/UX Design</h5>
+              <p class="card-text">Create seamless digital experiences with professional UI/UX design.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=WB8K2fbebo9V&format=png&color=5025d1" class="card-img-top" alt="Prototype Development">
+            <div class="card-body">
+              <h5 class="card-title">Prototype Development</h5>
+              <p class="card-text">Build interactive prototypes to test ideas quickly.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=LKGP8O2pAlRS&format=png&color=5025d1" class="card-img-top" alt="Dashboards Design">
+            <div class="card-body">
+              <h5 class="card-title">Dashboards Design</h5>
+              <p class="card-text">Design clean and data-driven dashboards for businesses.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software Development -->
+      <div class="tab-pane fade" id="software" role="tabpanel">
+        <div class="choose-card-container">
+          <div class="choose-card card">
+            <img src="https://img.icons8.com/?size=100&id=H2EORRzDw6Km&format=png&color=5025d1" class="card-img-top" alt="SaaS Development">
+            <div class="card-body">
+              <h5 class="card-title">SaaS Development</h5>
+              <p class="card-text">Build cloud-based SaaS solutions with robust architecture.</p>
+              <a href="#" class="btn choose-btn">Get Started</a>
+            </div>
+          </div>
+          <div class="choose-card card">
+  <img src="https://img.icons8.com/?size=100&id=ulpja5kGxpe0&format=png&color=5025d1" class="card-img-top" alt="Software Development">
+  <div class="card-body">
+    <h5 class="card-title">Software Development</h5>
+    <p class="card-text">Build custom software solutions tailored to your business needs.</p>
+    <a href="#" class="btn choose-btn">Get Started</a>
+  </div>
+</div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Website Migration Section -->
+<section class="py-5" style="background-color: #1f1346; color: #fff;">
+  <div class="container text-center">
+    <!-- Heading -->
+    <h2 class="fw-bold mb-3">Website migration. Made simple.</h2>
+    <p class="mb-5">
+      Currently hosting your website elsewhere? Join the 4+ million website owners who enjoy fast, secure and reliable web hosting here at Hostinger. 
+      Our expert team will handle everything while your site stays up and running throughout. That’s right – no downtime. No data loss. No problem.
+    </p>
+
+    <!-- Features Row -->
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="p-4 h-100 rounded-3" style="background-color: #2a1f55;">
+          <div class="mb-3">
+            <img src="https://img.icons8.com/?size=100&id=1765&format=png&color=FFFFFF" alt="Steps" style="width:50px; height:50px;">
+          </div>
+          <h5 class="fw-bold">3 simple steps</h5>
+          <p class="mb-0">
+            Simply pick your plan, fill in the migration request form, submit it and then sit back and relax.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="p-4 h-100 rounded-3" style="background-color: #2a1f55;">
+          <div class="mb-3">
+            <img src="https://img.icons8.com/?size=100&id=9991&format=png&color=FFFFFF" alt="Fast and Secure" style="width:50px; height:50px;">
+          </div>
+          <h5 class="fw-bold">Fast and secure</h5>
+          <p class="mb-0">
+            95% of websites are migrated in under 20 minutes. The other 5% are quicker than the industry average. 
+            And, your site stays live the whole time too.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="p-4 h-100 rounded-3" style="background-color: #2a1f55;">
+          <div class="mb-3">
+            <img src="https://img.icons8.com/?size=100&id=bUfZwGNyGinh&format=png&color=FFFFFF" alt="Free Migration" style="width:50px; height:50px;">
+          </div>
+          <h5 class="fw-bold">Free</h5>
+          <p class="mb-0">
+            Whether you have 1 website to migrate or 100, migration is free with all of our plans.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="mt-5">
+      <a href="#" class="btn choose-btn migrane-btn">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- Dashboard Section -->
+<section class="py-5" style="background-color: #f9f9ff;">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      
+      <!-- Left: Image -->
+      <div class="col-lg-6 text-center">
+        <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/661ccd94-cd07-4a03-a16a-62e7cfc48b00/public" 
+             alt="Dashboard Preview" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Right: Text -->
+      <div class="col-lg-6">
+        <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #e8e9ff; color:#4a3aff; font-weight:600;">
+          AI-POWERED
+        </span>
+        <h2 class="fw-bold mb-3" style="color:#1f1346;">
+          See everything. <br> Control everything.
+        </h2>
+        <p style="color:#444; font-size:16px; line-height:1.7;">
+          Keep an eye on everything that’s important to you, with our easy to use dashboard. 
+        </p>
+        <p style="color:#444; font-size:16px; line-height:1.7;">
+          Designed to be easy-to-use for beginners and professionals alike, you can see at a glance how 
+          your site is performing and make adjustments, among other things.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
+<!-- Kodee AI Agent Section -->
+<section class="d-flex justify-content-center py-5">
+  <div class="custom-container rounded shadow">
+    <div class="row align-items-stretch g-0">
+      
+      <!-- Left: Video -->
+      <div class="col-lg-6 col-12">
+        <div class="h-100 w-100">
+          <video autoplay muted loop playsinline class="w-100 h-100" style="object-fit: fill;">
+            <source src="https://customer-l1i0l3fn06n7hp6n.cloudflarestream.com/fe707b07ed9d4133a7733855fbdcf212/downloads/default.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Right: Content Box -->
+      <div class="col-lg-6 col-12 d-flex align-items-center">
+        <div class="p-4">
+          <span class="badge rounded-pill px-3 py-2 mb-3" style="background-color: #dff9f4; color:#0aa372; font-weight:600;">
+            NEW FEATURE
+          </span>
+          <h3 class="fw-bold mb-3" style="color:#1f1346; font-size:22px;">
+            Meet Kodee – the first AI Agent for WordPress
+          </h3>
+          <p style="color:#444; font-size:15px; line-height:1.6;">
+            Manage your site via simple chat with the first AI agent for WordPress. 
+            From publishing posts to managing WooCommerce stores, Kodee does it all – just ask, and it’s done.
+          </p>
+          <a href="#" class="btn choose-btn">Get Started</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
