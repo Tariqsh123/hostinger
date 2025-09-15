@@ -9,6 +9,14 @@
      <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- In <head> -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+ <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+
 </head>
 <body>
 
@@ -246,6 +254,42 @@
       </div>
     </div>
   </nav>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Get all dropdown toggles
+  var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+  dropdownToggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var parent = this.parentElement;
+      var menu = parent.querySelector('.dropdown-menu');
+
+      // Toggle show class
+      menu.classList.toggle('show');
+
+      // Close other open dropdowns
+      dropdownToggles.forEach(function(otherToggle){
+        if(otherToggle !== toggle) {
+          var otherMenu = otherToggle.parentElement.querySelector('.dropdown-menu');
+          otherMenu.classList.remove('show');
+        }
+      });
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', function(e){
+    dropdownToggles.forEach(function(toggle){
+      var menu = toggle.parentElement.querySelector('.dropdown-menu');
+      if(!toggle.parentElement.contains(e.target)){
+        menu.classList.remove('show');
+      }
+    });
+  });
+});
+</script>
+
 
   <!-- HEader -->
 <section class="hero">
@@ -254,15 +298,16 @@
       
       <!-- Left Text -->
       <div class="col-lg-6 col-md-12">
-        <h2>Designs That <span> Connect</span></h2>
-        <h1>Leading Global UX Design Agency</h1>
-        <ul>
-          <li>User-First Designs</li>
-          <li>Global Expertise</li>
-          <li>Proven Results</li>
-        </ul>
-        <a href="#" class="btn-start">Get Started</a>
-      </div>
+  <h2>Designs That <span> Connect</span></h2>
+  <h1>Leading Global UX Design Agency</h1>
+  <ul>
+    <li>Human-Centered UX Strategies</li>
+    <li>Cross-Platform Design Expertise</li>
+    <li>Data-Driven, Measurable Results</li>
+  </ul>
+  <a href="#" class="btn-start">Get Started</a>
+</div>
+
       
       <!-- Right Image -->
       <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
@@ -273,74 +318,293 @@
   </div>
 </section>
 
-<!-- Pricing Section -->
-<section class="pricing-section py-5">
+<!-- Pain Points Section -->
+
+  <!-- ===== Pain Points Top Section ===== -->
+<section id="pain-points" class="pain-points">
   <div class="container">
-    <h1 class="text-center mb-3">What We Provide</h1>
-    <p class="text-center mb-5">Complete digital solutions tailored to your business needs.</p>
-
-    <div class="row g-4 justify-content-center">
-
-      <!-- Website Development -->
-      <div class="col-sm-6 col-md-4">
-        <div class="pricing-card h-100 position-relative">
-          <h3>Website Development</h3>
-          <p class="plan-desc">Modern, responsive, and scalable websites for businesses of all sizes.</p>
-          <p class="price-info">We build websites that are SEO-friendly, secure, and optimized for speed.</p>
-          <ul>
-            <li>Custom & responsive design</li>
-            <li>E-commerce & CMS integration</li>
-            <li>SEO & performance optimization</li>
-            <li>Secure hosting & SSL setup</li>
-            <li>Ongoing maintenance & updates</li>
-          </ul>
-          <p class="benefits">Delivering websites that connect brands with their audience.</p>
-          <a href="#" class="choose-btn">Get More Info</a>
-        </div>
+    <div class="row align-items-center gy-5">
+      <!-- Left: Text -->
+      <div class="col-lg-6">
+        <h2 class="section-title">Common Challenges We Solve</h2>
+        <ul class="points-list">
+          <li>Slow, outdated websites that drive customers away</li>
+          <li>Manual processes causing wasted time and errors</li>
+          <li>Poor user experience leading to low conversions</li>
+          <li>Security and scalability issues as you grow</li>
+          <li>Inconsistent brand presence across devices</li>
+        </ul>
+        <!-- ✅ Call-to-Action Button -->
+        <a href="#contact" class="cta-btn">Get Your Solution</a>
       </div>
 
-      <!-- App Development -->
-      <div class="col-sm-6 col-md-4">
-        <div class="pricing-card h-100 position-relative popular">
-          <div class="most-popular">MOST DEMANDED</div>
-          <h3>App Development</h3>
-          <p class="plan-desc">High-performing mobile apps for Android and iOS platforms.</p>
-          <p class="price-info">Our apps combine sleek design with powerful functionality.</p>
-          <ul>
-            <li>Native & cross-platform apps</li>
-            <li>User-focused UI/UX design</li>
-            <li>API & third-party integrations</li>
-            <li>Scalable cloud-based solutions</li>
-            <li>Post-launch updates & support</li>
-          </ul>
-          <p class="benefits">Creating mobile apps that engage users and grow businesses.</p>
-          <a href="#" class="choose-btn">Get More Info</a>
-        </div>
+      <!-- Right: Image -->
+      <div class="col-lg-6 text-center">
+        <img
+          class="illustration"
+          src="https://www.amazonconsultant.ae/assets/frontend/images/sample/automated-amazon-store.webp"
+          alt="Illustration"
+        />
       </div>
-
-      <!-- Software Development -->
-      <div class="col-sm-6 col-md-4">
-        <div class="pricing-card h-100 position-relative">
-          <h3>Software Development</h3>
-          <p class="plan-desc">Custom-built software solutions designed to fit your workflow.</p>
-          <p class="price-info">From enterprise systems to cloud apps, we cover it all.</p>
-          <ul>
-            <li>Enterprise-grade applications</li>
-            <li>Cloud & desktop solutions</li>
-            <li>Database design & management</li>
-            <li>Custom APIs & integrations</li>
-            <li>Dedicated support & scaling</li>
-          </ul>
-          <p class="benefits">Powerful software that streamlines business operations.</p>
-          <a href="#" class="choose-btn">Get More Info</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 
+  <!-- ===== Testimonials (Swiper) ===== -->
+  <section id="testimonials">
+  <div class="container">
+    <h2 class="text-center mb-4">What Our Clients Say</h2>
+
+    <!-- Swiper -->
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=12" alt="Sarah">
+              <div class="testimonial-info">
+                <h5>Sarah M.</h5>
+                <div class="location">New York, USA</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “Our old site was painfully slow. They rebuilt it and our conversions jumped immediately!”
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=22" alt="Ahmed">
+              <div class="testimonial-info">
+                <h5>Ahmed R.</h5>
+                <div class="location">Dubai, UAE</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “They automated our manual tasks and cut processing time in half — a real game changer.”
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=32" alt="Lisa">
+              <div class="testimonial-info">
+                <h5>Lisa K.</h5>
+                <div class="location">Berlin, Germany</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “The new UX design is stunning and customers love the seamless experience.”
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=42" alt="Tom">
+              <div class="testimonial-info">
+                <h5>Tom H.</h5>
+                <div class="location">London, UK</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “Fantastic support and a beautiful end result — highly recommended.”
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=52" alt="Emily">
+              <div class="testimonial-info">
+                <h5>Emily S.</h5>
+                <div class="location">Sydney, Australia</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “Their redesign improved our brand credibility across devices.”
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img class="testimonial-img" src="https://i.pravatar.cc/150?img=62" alt="Carlos">
+              <div class="testimonial-info">
+                <h5>Carlos M.</h5>
+                <div class="location">Madrid, Spain</div>
+              </div>
+            </div>
+            <div class="testimonial-text">
+              “They delivered on time and improved performance dramatically.”
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  </section>
+
+  <!-- Scripts (Bootstrap then Swiper then init) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.testimonial-swiper', {
+        loop: true,
+        speed: 700,
+        spaceBetween: 30,
+        slidesPerView: 3,            // visible on large screens
+        slidesPerGroup: 1,           // move one card at a time
+        autoplay: {
+          delay: 2800,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false
+        },
+        grabCursor: true,            // draggable
+        allowTouchMove: true,
+        centeredSlides: false,
+        breakpoints: {
+          0:    { slidesPerView: 1, spaceBetween: 16 },
+          768:  { slidesPerView: 2, spaceBetween: 20 },
+          1200: { slidesPerView: 3, spaceBetween: 30 }
+        },
+        // no navigation, no pagination (per your request)
+      });
+    });
+  </script>
+
+<!-- Pain Points Section -->
+
+<!-- Projexts Section -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Our Portfolio</h2>
+      <p class="section-subtitle">
+        Explore a curated selection of our recent projects — innovative websites, intuitive applications, and scalable software solutions crafted to elevate businesses globally.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- 6 Project Images -->
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=1" alt="Project 1">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=2" alt="Project 2">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=3" alt="Project 3">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=4" alt="Project 4">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=5" alt="Project 5">
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <div class="project-card">
+          <img src="https://picsum.photos/600/400?random=6" alt="Project 6">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Comparison Section -->
+
+<section id="why-choose-us">
+  <div class="container-fluid px-lg-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5 text-dark">Why Choose Us</h2>
+      <p class="text-muted fs-5">
+        A clear difference between ordinary services and our expertise
+      </p>
+    </div>
+
+    <div class="row g-0 align-items-stretch" data-aos="fade-up">
+      <!-- OTHERS SIDE -->
+      <div
+        class="col-md-6 comparison-left d-flex flex-column justify-content-center p-4 p-lg-5"
+      >
+        <h3 class="fw-semibold mb-4 text-dark text-center text-md-start">
+          Others
+        </h3>
+        <ul class="list-unstyled text-dark">
+          <li class="mb-3">Generic website templates</li>
+          <li class="mb-3">One-size-fits-all software</li>
+          <li class="mb-3">Minimal UX research</li>
+          <li class="mb-3">Slow updates & stale designs</li>
+          <li class="mb-3">Limited ecommerce setup</li>
+          <li class="mb-3">Complex, confusing dashboards</li>
+        </ul>
+      </div>
+
+      <!-- OUR SIDE -->
+      <div
+        class="col-md-6 comparison-right d-flex flex-column justify-content-center p-4 p-lg-5"
+      >
+        <h3 class="fw-semibold mb-4 text-white text-center text-md-start">
+          Our Approach
+        </h3>
+        <ul class="list-unstyled text-white">
+          <li class="mb-3">
+            Modern, responsive <strong>Website Development</strong>
+          </li>
+          <li class="mb-3">
+            Custom, scalable <strong>Software Solutions</strong>
+          </li>
+          <li class="mb-3">
+            Research-driven <strong>UI/UX Design</strong>
+          </li>
+          <li class="mb-3">
+            Complete <strong>Website Revamps</strong>
+          </li>
+          <li class="mb-3">
+            Full <strong>E-commerce & Shopify Stores</strong>
+          </li>
+          <li class="mb-3">
+            Elegant <strong>Dashboard & SaaS Development</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
 
 <!-- Choose -->
 <!-- Services Section -->
@@ -629,8 +893,291 @@
   </div>
 </section>
 
+<!-- Pricing Section -->
+<section class="pricing-section py-5">
+  <div class="container">
+    <h1 class="text-center mb-3">What We Provide</h1>
+    <p class="text-center mb-5">Complete digital solutions tailored to your business needs.</p>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Website Development -->
+      <div class="col-sm-6 col-md-4">
+        <div class="pricing-card h-100 position-relative">
+          <h3>Website Development</h3>
+          <p class="plan-desc">Modern, responsive, and scalable websites for businesses of all sizes.</p>
+          <p class="price-info">We build websites that are SEO-friendly, secure, and optimized for speed.</p>
+          <ul>
+            <li>Custom & responsive design</li>
+            <li>E-commerce & CMS integration</li>
+            <li>SEO & performance optimization</li>
+            <li>Secure hosting & SSL setup</li>
+            <li>Ongoing maintenance & updates</li>
+          </ul>
+          <p class="benefits">Delivering websites that connect brands with their audience.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
+        </div>
+      </div>
+
+      <!-- App Development -->
+      <div class="col-sm-6 col-md-4">
+        <div class="pricing-card h-100 position-relative popular">
+          <div class="most-popular">MOST DEMANDED</div>
+          <h3>App Development</h3>
+          <p class="plan-desc">High-performing mobile apps for Android and iOS platforms.</p>
+          <p class="price-info">Our apps combine sleek design with powerful functionality.</p>
+          <ul>
+            <li>Native & cross-platform apps</li>
+            <li>User-focused UI/UX design</li>
+            <li>API & third-party integrations</li>
+            <li>Scalable cloud-based solutions</li>
+            <li>Post-launch updates & support</li>
+          </ul>
+          <p class="benefits">Creating mobile apps that engage users and grow businesses.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
+        </div>
+      </div>
+
+      <!-- Software Development -->
+      <div class="col-sm-6 col-md-4">
+        <div class="pricing-card h-100 position-relative">
+          <h3>Software Development</h3>
+          <p class="plan-desc">Custom-built software solutions designed to fit your workflow.</p>
+          <p class="price-info">From enterprise systems to cloud apps, we cover it all.</p>
+          <ul>
+            <li>Enterprise-grade applications</li>
+            <li>Cloud & desktop solutions</li>
+            <li>Database design & management</li>
+            <li>Custom APIs & integrations</li>
+            <li>Dedicated support & scaling</li>
+          </ul>
+          <p class="benefits">Powerful software that streamlines business operations.</p>
+          <a href="#" class="choose-btn">Get More Info</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="section-title" style="color:#000;">Frequently Asked Questions</h2>
+      <p class="section-subtitle" style="color:#6c757d;">
+        Answers to the most common questions from our clients about our services and processes.
+      </p>
+    </div>
+
+    <div class="accordion" id="faqAccordion">
+
+      <!-- FAQ Item 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+            What services do you provide?
+          </button>
+        </h2>
+        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We provide Website Development, Software Development, UI/UX Design, App Development, E-commerce solutions, SaaS, Dashboard Design, and more.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+            How long does it take to complete a project?
+          </button>
+        </h2>
+        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Project timelines vary depending on complexity, but typically a website or app project takes 4-8 weeks. SaaS or custom software may take longer.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+            Do you provide post-launch support?
+          </button>
+        </h2>
+        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we provide ongoing support, maintenance, and updates to ensure your website, app, or software runs smoothly after launch.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+            Can you redesign an existing website or software?
+          </button>
+        </h2>
+        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Absolutely! We can revamp your existing website, app, or dashboard to make it modern, responsive, and user-friendly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+            Do you offer E-commerce solutions?
+          </button>
+        </h2>
+        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes! We build fully functional E-commerce websites and Shopify stores with secure payment integration and product management.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+            What technologies do you use?
+          </button>
+        </h2>
+        <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            We use HTML, CSS, JavaScript, React, Next.js, Node.js, PHP, MySQL, and modern frameworks and tools to deliver high-quality solutions.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+            Do you provide custom software development?
+          </button>
+        </h2>
+        <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, we build custom software tailored to your business requirements, ensuring scalability, performance, and security.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeading8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
+            How can I get started with your services?
+          </button>
+        </h2>
+        <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            You can contact us via our website or email. We will discuss your project requirements, provide a proposal, and get started immediately.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- FAQ -->
+
+
+<!-- Footer -->
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4 text-start text-md-start text-center text-md-start">
+
+      <!-- Column 1: Logo & Description & Social -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
+        <img src="https://hpanel.hostinger.com/assets/images/logos/hostinger-black.svg" alt="Logo" class="footer-logo mb-3">
+        <p class="footer-text">
+          We provide modern web and software solutions to help your business grow online.
+        </p>
+        <div class="social-icons mt-3 d-flex gap-2">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
+        <h5 class="footer-heading">Quick Links</h5>
+        <ul class="footer-links list-unstyled mt-3">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Services -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
+        <h5 class="footer-heading">Services</h5>
+        <ul class="footer-links list-unstyled mt-3">
+          <li><a href="#">Website Development</a></li>
+          <li><a href="#">Software Development</a></li>
+          <li><a href="#">UI/UX Design</a></li>
+          <li><a href="#">Website Revamp</a></li>
+          <li><a href="#">App Design</a></li>
+          <li><a href="#">App Development</a></li>
+          <li><a href="#">Website Audit</a></li>
+          <li><a href="#">E-commerce Store Development</a></li>
+          <li><a href="#">Shopify Store Creation</a></li>
+          <li><a href="#">Prototype Development</a></li>
+          <li><a href="#">SaaS Development</a></li>
+          <li><a href="#">Dashboard Design & Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Get in Touch + Payment -->
+      <div class="col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center align-items-md-start">
+        <h5 class="footer-heading">Get in Touch</h5>
+        <ul class="footer-contact list-unstyled mt-3">
+          <li><i class="fas fa-phone-alt me-2"></i>+92 300 1234567</li>
+          <li><i class="fas fa-map-marker-alt me-2"></i>123 Main Street, Karachi, Pakistan</li>
+          <li><i class="fas fa-envelope me-2"></i>info@example.com</li>
+        </ul>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods mt-4 d-flex gap-2 flex-wrap justify-content-center justify-content-md-start">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" class="payment-icon">
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" class="payment-icon">
+          <img src="https://img.icons8.com/color/48/000000/paypal.png" alt="PayPal" class="payment-icon">
+          <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex" class="payment-icon">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     
+
+<!-- Before closing </body> -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
 </body>
 </html>
