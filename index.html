@@ -991,126 +991,87 @@ document.addEventListener("DOMContentLoaded", function () {
       </p>
     </div>
 
-    <div class="accordion" id="faqAccordion">
 
-      <!-- FAQ Item 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading1">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-            What services do you provide?
-          </button>
-        </h2>
-        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We provide Website Development, Software Development, UI/UX Design, App Development, E-commerce solutions, SaaS, Dashboard Design, and more.
-          </div>
-        </div>
-      </div>
 
-      <!-- FAQ Item 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading2">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-            How long does it take to complete a project?
-          </button>
-        </h2>
-        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Project timelines vary depending on complexity, but typically a website or app project takes 4-8 weeks. SaaS or custom software may take longer.
-          </div>
-        </div>
-      </div>
 
-      <!-- FAQ Item 3 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading3">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-            Do you provide post-launch support?
-          </button>
-        </h2>
-        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, we provide ongoing support, maintenance, and updates to ensure your website, app, or software runs smoothly after launch.
-          </div>
-        </div>
-      </div>
 
-      <!-- FAQ Item 4 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading4">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-            Can you redesign an existing website or software?
-          </button>
-        </h2>
-        <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Absolutely! We can revamp your existing website, app, or dashboard to make it modern, responsive, and user-friendly.
-          </div>
-        </div>
-      </div>
 
-      <!-- FAQ Item 5 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading5">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
-            Do you offer E-commerce solutions?
-          </button>
-        </h2>
-        <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes! We build fully functional E-commerce websites and Shopify stores with secure payment integration and product management.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 6 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading6">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
-            What technologies do you use?
-          </button>
-        </h2>
-        <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            We use HTML, CSS, JavaScript, React, Next.js, Node.js, PHP, MySQL, and modern frameworks and tools to deliver high-quality solutions.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 7 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading7">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
-            Do you provide custom software development?
-          </button>
-        </h2>
-        <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Yes, we build custom software tailored to your business requirements, ensuring scalability, performance, and security.
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 8 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="faqHeading8">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse8" aria-expanded="false" aria-controls="faqCollapse8">
-            How can I get started with your services?
-          </button>
-        </h2>
-        <div id="faqCollapse8" class="accordion-collapse collapse" aria-labelledby="faqHeading8" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            You can contact us via our website or email. We will discuss your project requirements, provide a proposal, and get started immediately.
-          </div>
-        </div>
-      </div>
-
+<div class="faq-container">
+  <div class="faq-item">
+    <div class="faq-question">What services do you offer?</div>
+    <div class="faq-answer">
+      We provide custom software development, web app design, UI/UX design, and full-stack web solutions tailored to your business needs.
     </div>
   </div>
+  <div class="faq-item">
+    <div class="faq-question">How long does a typical project take?</div>
+    <div class="faq-answer">
+      Project timelines vary by complexity—most web apps are delivered within 4–12 weeks after finalizing requirements.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Do you offer ongoing maintenance?</div>
+    <div class="faq-answer">
+      Yes, we provide continuous support, updates, and feature enhancements to keep your software secure and up to date.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Can you integrate third-party APIs or services?</div>
+    <div class="faq-answer">
+      Absolutely. We specialize in integrating payment gateways, analytics, and other APIs to extend your app’s functionality.
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">How can I start a project with you?</div>
+    <div class="faq-answer">
+      Contact us through our website form or email with your project details. We’ll schedule a free consultation to discuss scope and pricing.
+    </div>
+  </div>
+</div>
+
 </section>
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+
+      // Close any other open items
+      document.querySelectorAll('.faq-answer').forEach(ans => {
+        if (ans !== answer) {
+          ans.style.maxHeight = null;
+          ans.classList.remove('open');
+        }
+      });
+      document.querySelectorAll('.faq-question').forEach(que => {
+        if (que !== q) que.classList.remove('active');
+      });
+
+      // Toggle current item
+      if (answer.style.maxHeight) {
+        // Already open -> close it
+        answer.style.maxHeight = null;
+        answer.classList.remove('open');
+        q.classList.remove('active');
+      } else {
+        // Open -> set height to scrollHeight so all text shows
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.classList.add('open');
+        q.classList.add('active');
+      }
+    });
+  });
+</script>
+
 
 <!-- FAQ -->
 
+<!-- faq -->
+
+
+
+<!-- faq -->
 
 <!-- Footer -->
 <footer class="site-footer py-5">
