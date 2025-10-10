@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pricing-header{
+    height: 500px;
+    width: 100%;
+    background-color: #5025d1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.pricing-header h1{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.pricing-header ul{
+    height: fit-content;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+.pricing-header ul li {
+  color: #5025d1;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: small;
+  cursor: pointer;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.5s;
+}
+
+.pricing-header ul li:hover,
+.pricing-header ul li.active {
+  background-color: #2e0a9c;
+  color: white;
+}
+
+@media (max-width: 600px) {
+    .pricing-header h1{
+    font-size: 30px;
+}
+ .pricing-header ul li{
+    padding: 5px ;
+    font-size: x-small;
+    font-weight: 500;
+}   
+}
+
+
+/* Plans  */
+.pricing-plan-section {
+  padding: 80px 20px;
+  background-color: #f9f9fb;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+.section-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #5025d1;
+  margin-bottom: 8px;
+}
+.section-subtitle {
+  color: #666;
+  margin-bottom: 60px;
+  font-size: 17px;
+}
+
+/* -------- Grid Layout -------- */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* -------- Card Style -------- */
+.pricing-card {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+.pricing-card.highlight {
+  border: 2px solid #5025d1;
+  box-shadow: 0 12px 25px rgba(80, 37, 209, 0.15);
+}
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* -------- Inner Flex -------- */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 40px 30px;
+}
+
+/* -------- Card Header -------- */
+.offer-tag {
+  display: inline-block;
+  background-color: #5025d1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+.plan-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 6px;
+}
+.plan-desc {
+  color: #666;
+  margin-bottom: 22px;
+  font-size: 15px;
+}
+
+/* -------- Pricing -------- */
+.price {
+  font-size: 40px;
+  font-weight: 700;
+  color: #5025d1;
+  margin-bottom: 5px;
+}
+.currency {
+  font-size: 18px;
+  vertical-align: super;
+}
+.period {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+.sub-info {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.note {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* -------- Features & Benefits -------- */
+.features, .benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.features li, .benefits li {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.tick {
+  color: #5025d1;
+  font-weight: bold;
+  margin-right: 8px;
+}
+.benefits {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.benefits h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #5025d1;
+  margin-bottom: 10px;
+}
+
+/* -------- Button -------- */
+.choose-btn {
+  background-color: #5025d1;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+.choose-btn:hover {
+  background-color: #3b1ea3;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 32px;
+  }
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .pricing-plan-section {
+    padding: 60px 15px;
+  }
+  .card-inner {
+    padding: 30px 20px;
+  }
+  .price {
+    font-size: 34px;
+  }
+}
