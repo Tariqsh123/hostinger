@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Get Started</title>
 
 
      <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="pricing.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="our-story.css">
     <!-- In <head> -->
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
  <!-- Swiper CSS -->
@@ -19,7 +19,8 @@
 
 
 </head>
-<body>
+
+  <body>
 
     
 <nav class="navbar navbar-expand-lg sticky-top">
@@ -263,6 +264,7 @@
        <form class="d-flex">
   <a href="get-started.html" class="btn btn-custom text-decoration-none">Get Started</a>
        </form>
+
       </div>
     </div>
   </nav>
@@ -303,663 +305,174 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-<!-- header -->
- <section class="pricing-header text-center">
-  <h1>Choose a Service - Get Online Today</h1>
-  <ul class="service-list">
-    <li class="active" data-service="website">Website Development</li>
-    <li data-service="software">Software Development</li>
-    <li data-service="uiux">UI UX Design</li>
-    <li data-service="revamp">Website Revamp</li>
-    <li data-service="appdesign">App Design</li>
-    <li data-service="appdev">App Development</li>
-    <li data-service="audit">Website Audit</li>
-    <li data-service="ecom">Ecommerce Store Development</li>
-    <li data-service="shopify">Shopify Store Creation</li>
-    <li data-service="prototype">Prototype Development</li>
-    <li data-service="saas">SaaS Development</li>
-    <li data-service="dashboard">Dashboard Design & Development</li>
-    <li data-service="seo">SEO Service</li>
-  </ul>
-</section>
+  
 
-<section class="pricing-plan-section">
+<!-- Contact Us -->
+ <section class="contact-section" style="background-color: #f5f6fa; padding: 20px 0;width: 90%;margin: 0 auto;">
   <div class="container">
-    <h2 class="section-title text-center">Choose Your Plan</h2>
-    <div id="pricingCards" class="pricing-cards"></div>
+    <div class="row align-items-center shadow-lg rounded-4 overflow-hidden bg-white">
+      
+      <!-- Left Image -->
+      <div class="col-lg-6 p-0">
+        <img src="https://imagedelivery.net/LqiWLm-3MGbYHtFuUbcBtA/e22062da-11b6-4592-7596-a9f145349600/w=1760,sharpen=1" 
+             alt="Support Team" class="img-fluid h-100 w-100 object-fit-cover">
+      </div>
+
+      <!-- Right Form -->
+      <div class="col-lg-6 p-4 p-md-5">
+        <div class="contact-form-wrapper">
+          <h2 class="fw-bold text-center mb-3" style="color:#5025d1;">Let’s Connect</h2>
+          <p class="text-center text-muted mb-4">
+            Have a project in mind? Fill out the form below and our team will get back to you shortly.
+          </p>
+
+          <form>
+            <div class="row g-3">
+              
+              <!-- First Name -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">First Name</label>
+                <input type="text" class="form-control custom-input" placeholder="John">
+              </div>
+
+              <!-- Last Name -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Last Name</label>
+                <input type="text" class="form-control custom-input" placeholder="Doe">
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email</label>
+                <input type="email" class="form-control custom-input" placeholder="example@email.com">
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone</label>
+                <input type="tel" class="form-control custom-input" placeholder="+92 300 1234567">
+              </div>
+
+              <!-- File -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">Choose File</label>
+                <input type="file" class="form-control custom-input">
+              </div>
+
+              <!-- Subject -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">Subject</label>
+                <input type="text" class="form-control custom-input" placeholder="Project subject">
+              </div>
+
+              <!-- Dropdown -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">Select Service</label>
+                <select class="form-select custom-input">
+                  <option selected disabled>Choose a service</option>
+                  <option>Website Development</option>
+                  <option>Software Development</option>
+                  <option>UI UX Design</option>
+                  <option>Website Revamp</option>
+                  <option>App Design</option>
+                  <option>App Development</option>
+                  <option>Website Audit</option>
+                  <option>Ecommerce Store Development</option>
+                  <option>Shopify Store Creation</option>
+                  <option>Prototype Development</option>
+                  <option>Saas Development</option>
+                  <option>Dashboard Design & Development</option>
+                  <option>SEO Service</option>
+                </select>
+              </div>
+
+              <!-- Details -->
+              <div class="col-12">
+                <label class="form-label fw-semibold">Details</label>
+                <textarea class="form-control custom-input" rows="4" placeholder="Tell us more about your project..."></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn custom-btn px-5 py-3 fw-semibold">
+                  Send Message
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<script>
-// ===== PRICING DATA =====
-const pricingData = {
-  website: [
-    {
-      title: "Starter",
-      desc: "Perfect for freelancers or startups who want a clean and professional website.",
-      price: "3.49",
-      features: [
-        "1 Page Responsive Website",
-        "Free SSL Setup",
-        "Basic SEO Optimization",
-        "Mobile Friendly Layout",
-        "1 Business Email",
-        "5 GB Hosting Space",
-        "Delivery in 3 Days"
-      ]
-    },
-    {
-      title: "Pro",
-      desc: "Ideal for small businesses looking to grow their online presence with style.",
-      price: "8.99",
-      features: [
-        "Up to 10 Pages Website",
-        "Free Domain (1 Year)",
-        "Speed Optimization",
-        "Blog & Contact Forms",
-        "SEO-Ready Structure",
-        "Monthly Backup",
-        "Priority Support"
-      ]
-    },
-    {
-      title: "Elite",
-      desc: "A complete solution for agencies and enterprises with custom integrations.",
-      price: "18.99",
-      features: [
-        "Unlimited Pages",
-        "Cloud Hosting + CDN",
-        "Advanced Security Setup",
-        "CMS + Admin Panel",
-        "Live Chat Integration",
-        "Custom Animations",
-        "24/7 VIP Support"
-      ]
-    }
-  ],
-
-  software: [
-    {
-      title: "Basic",
-      desc: "For small tools or automation systems with minimal logic and UI.",
-      price: "5.99",
-      features: [
-        "Single Module Software",
-        "Database Integration",
-        "User Login System",
-        "1 Feature Revision",
-        "Bug Fix Support (15 Days)",
-        "Free Deployment Help",
-        "Email Support"
-      ]
-    },
-    {
-      title: "Pro",
-      desc: "Ideal for startups needing advanced admin control and analytics.",
-      price: "11.49",
-      features: [
-        "Multi-User Role System",
-        "Admin Dashboard",
-        "API Integration",
-        "Data Analytics Tools",
-        "Authentication via JWT",
-        "Cloud Ready Deployment",
-        "Priority Support"
-      ]
-    },
-    {
-      title: "Enterprise",
-      desc: "Enterprise-grade systems with automation and cloud scalability.",
-      price: "27.99",
-      features: [
-        "Microservice Architecture",
-        "High-End Security & Encryption",
-        "Auto Deployment Pipeline",
-        "Custom API Suite",
-        "AI-Powered Insights",
-        "Dedicated Server Setup",
-        "Lifetime Maintenance"
-      ]
-    }
-  ],
-
-  uiux: [
-    {
-      title: "Basic Design",
-      desc: "Modern UI for small websites or portfolios.",
-      price: "2.79",
-      features: [
-        "Home + 3 Pages UI",
-        "Color Palette & Fonts",
-        "Wireframes + Mockups",
-        "1 Revision",
-        "Responsive Design",
-        "Figma Source File",
-        "Delivery in 2 Days"
-      ]
-    },
-    {
-      title: "Pro Design",
-      desc: "Interactive UI with animations and research-based UX.",
-      price: "6.59",
-      features: [
-        "Up to 8 Pages Design",
-        "UX Research & Personas",
-        "Prototype + Micro Interactions",
-        "Component Library",
-        "Responsive Layouts",
-        "2 Revisions",
-        "Figma + Prototype"
-      ]
-    },
-    {
-      title: "Corporate Design",
-      desc: "Full brand experience with advanced UX systems.",
-      price: "10.99",
-      features: [
-        "Design System + Guidelines",
-        "User Journey Maps",
-        "High-Fidelity Prototypes",
-        "Accessibility Compliance",
-        "Usability Testing",
-        "Unlimited Iterations (1 Month)",
-        "Dedicated UX Designer"
-      ]
-    }
-  ],
-
-  revamp: [
-    {
-      title: "Lite",
-      desc: "Revamp small websites to look clean, fast, and mobile-friendly.",
-      price: "3.99",
-      features: [
-        "Homepage Redesign",
-        "Speed Optimization",
-        "Mobile Responsiveness Fix",
-        "Image Compression",
-        "Bug Fixing",
-        "Color & Font Upgrade",
-        "Delivery in 2 Days"
-      ]
-    },
-    {
-      title: "Advanced",
-      desc: "Modern redesign with animations, SEO boost, and UI improvements.",
-      price: "7.49",
-      features: [
-        "5 Pages Revamp",
-        "New Layout + Animations",
-        "SEO Structure Update",
-        "Conversion Optimization",
-        "Form Rework + Security Fix",
-        "2 Design Options",
-        "Delivery in 4 Days"
-      ]
-    },
-    {
-      title: "Premium",
-      desc: "Complete brand refresh and re-engineering for performance.",
-      price: "12.99",
-      features: [
-        "Full Site Redesign (10+ Pages)",
-        "Custom Animations",
-        "New Branding Kit",
-        "Speed Grade A Optimization",
-        "UI/UX Testing",
-        "CMS Integration",
-        "3 Month Maintenance"
-      ]
-    }
-  ],
-
-  appdesign: [
-    {
-      title: "Starter App Design",
-      desc: "Basic layout and screens for startup apps.",
-      price: "4.29",
-      features: [
-        "Up to 5 Screens",
-        "Basic UI Kit",
-        "Color Palette & Icons",
-        "Wireframe + Mockups",
-        "1 Revision",
-        "Figma Source File",
-        "Delivery in 2 Days"
-      ]
-    },
-    {
-      title: "Growth App Design",
-      desc: "UI/UX for functional apps with real user flow testing.",
-      price: "9.59",
-      features: [
-        "Up to 15 Screens",
-        "User Flow Mapping",
-        "Click Prototype",
-        "Micro Interactions",
-        "2 Revisions",
-        "UX Research Included",
-        "Priority Delivery"
-      ]
-    },
-    {
-      title: "Premium App Design",
-      desc: "Enterprise app visuals with high-end animation and usability.",
-      price: "14.99",
-      features: [
-        "Up to 30 Screens",
-        "Full UX Strategy",
-        "Animated Prototypes",
-        "Component System",
-        "Advanced Interactions",
-        "Unlimited Revisions (1 Month)",
-        "Dedicated Designer"
-      ]
-    }
-  ],
-
-  appdev: [
-    {
-      title: "Basic App",
-      desc: "Simple Android or iOS app for small businesses.",
-      price: "7.99",
-      features: [
-        "1 Platform (Android/iOS)",
-        "Firebase Integration",
-        "Push Notifications",
-        "Basic UI/UX",
-        "App Launch Assistance",
-        "1 Revision",
-        "Email Support"
-      ]
-    },
-    {
-      title: "Cross Platform",
-      desc: "Build one app for both Android and iOS with modern frameworks.",
-      price: "13.79",
-      features: [
-        "Flutter / React Native App",
-        "Custom API Integration",
-        "Admin Dashboard",
-        "Real-Time Notifications",
-        "ASO Optimization",
-        "3 Revisions",
-        "Priority Support"
-      ]
-    },
-    {
-      title: "Enterprise App",
-      desc: "Scalable, secure, and powerful mobile app for enterprises.",
-      price: "26.49",
-      features: [
-        "Custom Native App",
-        "Cloud Hosting Setup",
-        "Data Encryption",
-        "Multi-Admin Dashboard",
-        "Analytics Integration",
-        "Continuous Updates (1 Year)",
-        "Dedicated Dev Team"
-      ]
-    }
-  ],
-
-  audit: [
-    {
-      title: "Basic Audit",
-      desc: "Identify your website’s technical and design issues quickly.",
-      price: "2.99",
-      features: [
-        "Performance Report",
-        "SEO Health Check",
-        "Mobile Friendliness Test",
-        "Security Scan",
-        "1 Recommendation Sheet",
-        "1 Revision",
-        "Email Report Delivery"
-      ]
-    },
-    {
-      title: "Professional Audit",
-      desc: "In-depth website audit covering speed, SEO, and UI.",
-      price: "5.49",
-      features: [
-        "Technical SEO Analysis",
-        "Speed + UX Audit",
-        "Broken Link Detection",
-        "Competitor Comparison",
-        "Keyword Health Report",
-        "2 Strategy Sessions",
-        "PDF Report"
-      ]
-    },
-    {
-      title: "Complete Audit",
-      desc: "Full 360° review with actionable improvement strategies.",
-      price: "9.99",
-      features: [
-        "Advanced SEO + Security Audit",
-        "UX Journey Evaluation",
-        "Content Optimization Guide",
-        "Core Web Vitals Fixes",
-        "Custom Growth Strategy",
-        "Dedicated Analyst",
-        "Follow-up Consultation"
-      ]
-    }
-  ],
-
-  ecom: [
-    {
-      title: "Basic Store",
-      desc: "Launch your online store with all essentials ready to sell.",
-      price: "6.99",
-      features: [
-        "Up to 20 Products",
-        "Responsive Store Design",
-        "Cart + Checkout Setup",
-        "Payment Gateway Integration",
-        "Inventory Dashboard",
-        "Email Notifications",
-        "1 Week Delivery"
-      ]
-    },
-    {
-      title: "Pro Store",
-      desc: "Scalable eCommerce store with marketing and automation.",
-      price: "12.99",
-      features: [
-        "Up to 100 Products",
-        "Discount & Coupon System",
-        "SEO-Friendly Product Pages",
-        "Automated Emails",
-        "Wishlist & Review System",
-        "Analytics Integration",
-        "Free Support (1 Month)"
-      ]
-    },
-    {
-      title: "Mega Store",
-      desc: "Enterprise-level eCommerce store with full-scale management.",
-      price: "21.49",
-      features: [
-        "Unlimited Products",
-        "Custom Admin Dashboard",
-        "Multi-Vendor System",
-        "AI Product Recommendations",
-        "Live Chat & CRM",
-        "Advanced Security",
-        "Dedicated Account Manager"
-      ]
-    }
-  ],
-
-  shopify: [
-    {
-      title: "Shopify Basic",
-      desc: "Launch your Shopify store quickly with a professional design.",
-      price: "5.99",
-      features: [
-        "Theme Installation & Setup",
-        "5 Products Added",
-        "Homepage Customization",
-        "Payment Gateway Setup",
-        "1 Revision",
-        "Email Support",
-        "Delivery in 3 Days"
-      ]
-    },
-    {
-      title: "Shopify Pro",
-      desc: "Perfect for growing stores needing more features and customization.",
-      price: "9.79",
-      features: [
-        "Up to 25 Products",
-        "Advanced Theme Customization",
-        "SEO Setup",
-        "Cart + Checkout Styling",
-        "Discount Codes Integration",
-        "2 Revisions",
-        "Chat Support"
-      ]
-    },
-    {
-      title: "Shopify Premium",
-      desc: "Full Shopify setup with branding, design, and marketing tools.",
-      price: "15.99",
-      features: [
-        "Unlimited Products",
-        "Custom Sections & Pages",
-        "App Integration (Email, Reviews)",
-        "Sales Funnel Setup",
-        "Performance Optimization",
-        "3 Revisions",
-        "Dedicated Support Agent"
-      ]
-    }
-  ],
-
-  prototype: [
-    {
-      title: "Concept",
-      desc: "Turn your raw idea into a visual prototype quickly.",
-      price: "3.99",
-      features: [
-        "3 App Screens",
-        "Wireframes + Mockups",
-        "1 Revision",
-        "Clickable Prototype",
-        "Figma Source File",
-        "Delivery in 2 Days",
-        "Email Support"
-      ]
-    },
-    {
-      title: "Interactive",
-      desc: "Clickable, animated prototype to showcase app flow.",
-      price: "8.49",
-      features: [
-        "Up to 10 Screens",
-        "Custom Animations",
-        "UX Flow Design",
-        "Micro Interactions",
-        "2 Revisions",
-        "User Testing Ready",
-        "Priority Delivery"
-      ]
-    },
-    {
-      title: "Full Simulation",
-      desc: "High-fidelity, fully interactive prototype with animations and logic.",
-      price: "13.99",
-      features: [
-        "Full App Experience",
-        "Transitions + Real Feel",
-        "UX Flow Mapping",
-        "Component System",
-        "Presentation Mode",
-        "Unlimited Iterations",
-        "Dedicated Designer"
-      ]
-    }
-  ],
-
-  saas: [
-    {
-      title: "Basic SaaS",
-      desc: "Ideal for MVPs or early-stage SaaS startups.",
-      price: "9.49",
-      features: [
-        "Login + Dashboard Module",
-        "Cloud Hosting Setup",
-        "1 Core Feature",
-        "Billing Integration (Stripe)",
-        "1 Revision",
-        "Email Support",
-        "Delivery in 5 Days"
-      ]
-    },
-    {
-      title: "Pro SaaS",
-      desc: "Feature-rich SaaS with admin control and automation.",
-      price: "18.99",
-      features: [
-        "Multi-Tenant System",
-        "API Integration",
-        "Role Management",
-        "Analytics Dashboard",
-        "Email Automation",
-        "3 Revisions",
-        "Priority Support"
-      ]
-    },
-    {
-      title: "Enterprise SaaS",
-      desc: "Full cloud-based solution for large-scale operations.",
-      price: "34.99",
-      features: [
-        "Microservice Architecture",
-        "Advanced Data Encryption",
-        "Subscription Management",
-        "AI-Powered Reports",
-        "Custom APIs",
-        "Cloud Scaling",
-        "Dedicated Development Team"
-      ]
-    }
-  ],
-
-  dashboard: [
-    {
-      title: "Basic Panel",
-      desc: "Clean dashboard for small data visualization or admin tasks.",
-      price: "4.99",
-      features: [
-        "User Login System",
-        "Chart Integration",
-        "CRUD Operations",
-        "1 Theme Style",
-        "Responsive Design",
-        "Delivery in 2 Days",
-        "Email Support"
-      ]
-    },
-    {
-      title: "Pro Panel",
-      desc: "Interactive admin dashboard with analytics and management tools.",
-      price: "9.79",
-      features: [
-        "Role-Based Access",
-        "Advanced Charts + Tables",
-        "API Integration",
-        "Search & Filters",
-        "Data Export Options",
-        "2 Design Layouts",
-        "Chat Support"
-      ]
-    },
-    {
-      title: "Enterprise Panel",
-      desc: "Complex data systems with automation and live updates.",
-      price: "18.49",
-      features: [
-        "Real-Time Data Update",
-        "Custom Widgets + Reports",
-        "Multi-Admin Access",
-        "Cloud Database Connection",
-        "Dark/Light Mode",
-        "Performance Optimization",
-        "Dedicated Dev Support"
-      ]
-    }
-  ],
-
-  seo: [
-    {
-      title: "Basic SEO",
-      desc: "Get your website visible on Google with the right setup.",
-      price: "2.29",
-      features: [
-        "On-Page SEO Setup",
-        "Keyword Analysis (3 Keywords)",
-        "Meta Tags Optimization",
-        "Google Index Setup",
-        "Speed Optimization",
-        "Email Report",
-        "Delivery in 2 Days"
-      ]
-    },
-    {
-      title: "Pro SEO",
-      desc: "Boost rankings with off-page and technical SEO support.",
-      price: "5.89",
-      features: [
-        "Backlink Building (15 Links)",
-        "Content Optimization",
-        "3 Blog SEO Reports",
-        "Competitor Tracking",
-        "Weekly Progress Reports",
-        "2 Revisions",
-        "Priority Support"
-      ]
-    },
-    {
-      title: "Enterprise SEO",
-      desc: "Dominate search engines with a full strategy and automation.",
-      price: "9.49",
-      features: [
-        "AI Keyword Strategy",
-        "Backlink Campaign (50+ Links)",
-        "Blog Creation (4 Posts/Month)",
-        "Performance Dashboard",
-        "Voice Search Optimization",
-        "Daily Rank Reports",
-        "Dedicated SEO Manager"
-      ]
-    }
-  ]
-};
-
-// ===== RENDER FUNCTION =====
-function renderPlans(service = "website") {
-  const container = document.getElementById("pricingCards");
-  const plans = pricingData[service] || pricingData.default;
-
-  container.innerHTML = plans.map(plan => `
-    <div class="pricing-card">
-      <div class="card-inner">
-        <h3 class="plan-title">${plan.title}</h3>
-        <p class="plan-desc">${plan.desc}</p>
-        <div class="price">
-          <span class="currency">US$</span>${plan.price}<span class="period">/mo</span>
-        </div>
-        <ul class="features">
-          ${plan.features.map(f => `<li>${f}</li>`).join("")}
-        </ul>
-        <button class="choose-btn">Choose Plan</button>
-      </div>
-    </div>
-  `).join("");
+<style>
+/* Section layout */
+.contact-section img {
+  object-fit: cover;
+  height: 100%;
+  min-height: 100%;
 }
 
-// ===== INITIAL LOAD =====
-renderPlans("website");
+.contact-form-wrapper {
+  transition: all 0.4s ease;
+}
+.contact-form-wrapper:hover {
+  transform: translateY(-3px);
+}
 
-// ===== CLICK HANDLERS =====
-const serviceItems = document.querySelectorAll('.service-list li');
-serviceItems.forEach(item => {
-  item.addEventListener('click', () => {
-    serviceItems.forEach(li => li.classList.remove('active'));
-    item.classList.add('active');
-    const service = item.dataset.service;
-    renderPlans(service);
-  });
-});
-</script>
+/* Input styling */
+.custom-input {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+.custom-input:focus {
+  background-color: #fff;
+  border-color: #5025d1;
+  box-shadow: 0 0 0 4px rgba(80, 37, 209, 0.15);
+}
 
-<!-- Plan Section End -->
+/* Button styling */
+.custom-btn {
+  background: linear-gradient(90deg, #5025d1, #6f45ff);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(80, 37, 209, 0.3);
+}
+.custom-btn:hover {
+  background: linear-gradient(90deg, #6f45ff, #5025d1);
+  box-shadow: 0 8px 20px rgba(80, 37, 209, 0.4);
+  transform: translateY(-2px);
+}
+.form-label {
+  color: #333;
+}
+
+/* Responsive behavior */
+@media (max-width: 991px) {
+  .contact-section .row {
+    flex-direction: column;
+  }
+  .contact-section img {
+    height: 300px;
+    width: 100%;
+  }
+}
+</style>
+
+<!-- Contact Us End -->
 
 
 
+
+ 
 <!-- Footer -->
 <footer class="site-footer py-5">
   <div class="container">
