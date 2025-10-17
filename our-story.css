@@ -31,10 +31,11 @@
 }
 
 .our-story-header-left h1 {
-  font-size: 35px;
+  font-size: 40px;
   color: #5025d1;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .our-story-header-left p {
