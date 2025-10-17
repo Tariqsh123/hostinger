@@ -316,7 +316,7 @@ width: 150px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   font-weight: 400;
   background-image: linear-gradient(
     120deg,
@@ -350,11 +350,10 @@ width: 150px;
         font-size: 30px;
       }
       .hero ul li {
-        font-size: 14px; /* Small paragraph */
+        font-size: 14px;
+        padding-left: 20px;
       }
       .btn-start {
-        padding: 6px 15px; /* Smaller button */
-        font-size: 14px;
       }
     }
 
@@ -502,7 +501,7 @@ width: 150px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: black 1px 1px 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     font-weight: 400;
     background-image: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
     background-repeat: no-repeat;
@@ -538,7 +537,8 @@ width: 150px;
   }
 
   .pricing-section p {
-    font-size: 14px; /* small text */
+    font-size: 14px; 
+    margin-bottom: 5px !important;
   }
   .pricing-section {
     padding: 10px !important;
@@ -636,7 +636,7 @@ width: 150px;
 
 /* Title */
 .pain-points .section-title {
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 500;
   margin-bottom: 30px;
   font-family: "Open Sans", sans-serif;
@@ -695,7 +695,7 @@ width: 150px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   font-weight: 400;
   background-image: linear-gradient(
     120deg,
@@ -711,8 +711,7 @@ width: 150px;
 /* ---- Responsive ---- */
 @media (max-width: 991px) {
   .pain-points .section-title {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 30px;
   }
   .points-list li {
     font-size: 1rem;
@@ -729,11 +728,25 @@ width: 150px;
   .pain-points .section-title,
   .points-list,
   .cta-btn {
-    text-align: center;
+    text-align: left;
   }
 
   .cta-btn {
     margin: 0 auto;
+  }
+  .choose-services-heading{
+    font-size: 30px;
+  }
+  .choose-service-after-heaidng-text{
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 14px;
+    height: 60px;
+    margin-top: 20px;
+  }
+  .choose-card {
+    height: 270px;
   }
 }
 
@@ -830,6 +843,9 @@ width: 150px;
 
 /* Responsive tweaks */
 @media (max-width: 767.98px) {
+  #testimonials h2{
+    font-size: 30px;
+  }
   .testimonial-card {
     max-width: 100%;
     padding: 20px;
@@ -840,6 +856,9 @@ width: 150px;
   }
   .pain-points {
     padding: 0px 0;
+}
+.testimonial-text{
+  font-size: 14px;
 }
 #testimonials {
     padding: 20px 0;
@@ -859,6 +878,7 @@ width: 150px;
   max-width: 650px;
   margin: 0 auto;
   font-size: 1.1rem;
+  color: gray;
 }
 
 /* Project image cards */
@@ -882,11 +902,14 @@ width: 150px;
 /* Responsive spacing tweaks */
 @media (max-width: 767.98px) {
   .projects-section {
-    padding: 60px 0;
+    padding: 30px 0;
   }
   .section-title {
-    font-size: 2rem;
+    font-size: 30px;
   }
+  .section-subtitle {
+  font-size: 14px;
+}
 }
 
 /* Comparison Section */
@@ -945,6 +968,15 @@ width: 150px;
       .comparison-left,
       .comparison-right {
         border-radius: 0;
+      }
+      #why-choose-us h2{
+        font-size: 30px;
+      }
+      #why-choose-us p{
+        font-size: 14px !important;
+      }
+      #why-choose-us ul li{
+        font-size: 14px;
       }
     }
 
@@ -1012,6 +1044,9 @@ width: 150px;
   @media (max-width: 600px) {
     .faq-question, .faq-answer {
       font-size: 15px;
+    }
+    #faq h2{
+      font-size: 30px;
     }
   }
 
@@ -1205,4 +1240,22 @@ width: 150px;
  #meet-kodee-heading{
   font-size: 30px;
 } 
+#migration-heading{
+  font-size: 30px;
+}
+#ai-powered-heading{
+  font-size: 30px;
+}
+#after-migration-section{
+  text-align: center;
+}
+#after-migration-section span{
+  font-size: medium !important;
+}
+#after-migration-section p{
+  font-size: 14px !important;
+}
+#Kodee-ai-text-section{
+  text-align: center;
+}
 }
