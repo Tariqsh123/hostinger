@@ -310,136 +310,180 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <style>
-    .sitemap-main-container{
-        height: fit-content;
-        width: 95%;
-        max-width: 1400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 20px auto;
-        gap: 20px;
-    }
-    .sitemap-main-container h1{
-        text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        width: 100%;
-    }
-    .sitemap-main-container h2{
-        text-align: left;
-        color: white;
-        font-family: 'Open Sans', sans-serif;
-        background-color: #5025d1;
-        width: 100%;
-        font-size: 30px;
-        font-weight: 500;
-        padding: 10px 10px;
-        border-radius: 5px;
-    }
-  .sitemap-main-container ul {
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  gap: 30px;
-  grid-template-columns: repeat(4, 2fr); /* 4 per row */
-  list-style: none;
-  width: 100%;
+body {
+  background: #f0f2f5;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
   padding: 0;
 }
 
-
-
-/* Link styling */
-.sitemap-main-container ul a {
-  font-size: large;
-  font-weight: 600;
-  color: black;
-  text-decoration: none;
-  width: fit-content;
+.sitemap-main-container {
+  max-width: 1400px;
+  margin: 50px auto;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: left;
-  gap: 10px;
-}
-
-/* Tick styling */
-.sitemap-main-container ul a::before {
-  content: "\2713";
-  display: inline-flex;
   align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.sitemap-main-container h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #5025d1;
+}
+
+/* Tree container */
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Parent node */
+/* Parent node */
+.parent-node {
+  width: 100%;
+  height: fit-content;
+}
+
+.parent-node a {
+  display: block;      
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #5025d1, #7e57ff);
+  color: #fff;
+  padding: 05px;
+  border-radius: 15px;
+  font-weight: 600;
+  border: 1px solid white;
+  font-size: x-large;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+
+/* Children container */
+.children {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  background-color: #5025d1;
-  color: #fff !important;
-  border-radius: 50%;
-  font-size: 14px;
-  flex-shrink: 0;
-}
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .sitemap-main-container ul {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row on medium screens */
-  }
-  .sitemap-main-container ul a {
-  font-size: medium;
-  }
-}
-@media (max-width: 575px) {
-  .sitemap-main-container ul {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
-  }
-  .sitemap-main-container ul a {
-  font-size: small;
-  }
-  .sitemap-main-container ul a::before {
-    width: 20px;
-    height: 20px;
-    font-size: small;
-}
+  align-items: center;
+  gap: 30px 25px;
 }
 
+/* Child node card */
+.children li {
+  list-style: none;
+}
 
+.children li a {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid gainsboro;
+  color: #5025d1;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
 
+/* Staggered effect */
+.children li:nth-child(odd) {
+  transform: translateY(0px);
+}
+.children li:nth-child(even) {
+  transform: translateY(10px);
+}
+
+.children li a:hover {
+  /* transform: translateY(-10px) scale(1.05); */
+  box-shadow: 0 12px 30px rgba(80,37,209,0.25);
+  color: #fff;
+  background: linear-gradient(135deg, #5025d1, #7e57ff);
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .children li { flex: 1 1 calc(50% - 20px); }
+  .children li:nth-child(even) { transform: translateY(0); }
+}
+@media(max-width:576px){
+      .children {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 5px;
+        align-items: center;
+        padding: 0;
+    }
+
+      .tree {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+  .children li { flex: none; transform: translateY(0); }
+  .sitemap-main-container h1 { font-size: 35px; margin-bottom: 0px; }
+  .children li a { font-size: 1rem; padding: 10px 15px; }
+  .sitemap-main-container {
+    margin: 20px auto;
+    gap: 0px;
+}
+}
 </style>
 
-
 <div class="sitemap-main-container">
+  <h1>Sitemap</h1>
 
-    <h1>Sitemap</h1>
-    <h2>Our Company</h2>
-    <ul>
-        <a href="index.html" title="Home">Home</a>
-        <a href="pricing.html" title="Pricing">Pricing</a>
-        <a href="our-story.html" title="Our Story">Our Story</a>
-        <a href="knowledge-base.html" title="Knowledege Base">Knowledege Base</a>
-        <a href="contact.html" title="Contact Us">Contact Us</a>
-        <a href="get-started.html" title="Getting Started">Getting Started</a>
-        <a href="terms.html" title="Terms & Conditions">Terms & Conditions</a>
-        <a href="privacy.html" title="Privacy Policy">Privacy Policy</a>
+  <!-- Our Company Section -->
+  <div class="tree">
+    <div class="parent-node"><a href="#">Our Company</a></div>
+    <ul class="children">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="knowledge-base.html">Knowledge Base</a></li>
+      <li><a href="get-started.html">Get Started</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+      <li><a href="terms.html">Terms & Conditions</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
-    <h2>Our Services</h2>
-    <ul>
-        <a href="website-development-service.html" title="Website Development">Website Development</a>
-        <a href="software-development-service.html" title="Software Development">Software Development</a>
-        <a href="ui-ux-design.html" title="UI UX Design">UI UX Design</a>
-        <a href="website-revamp.html" title="Website Revamp">Website Revamp</a>
-        <a href="app-design.html" title="App Design">App Design</a>
-        <a href="app-development.html" title="App Development">App Development</a>
-        <a href="website-audit.html" title="Website Audit">Website Audit</a>
-        <a href="ecommerce-store-development.html" title="Ecommerce Store Development">Ecommerce Store Development</a>
-        <a href="shopify-store-creation.html" title="Shopify Store Creation">Shopify Store Creation</a>
-        <a href="prototype-development.html" title="Prototype Development">Prototype Development</a>
-        <a href="saas-development.html" title="Saas Development">Saas Development</a>
-        <a href="dashboard-design-development.html" title="Dashboard Design & Development">Dashboard Design & Development</a>
-        <a href="seo-service.html" title="SEO Service">SEO Service</a>
+  </div>
+
+  <!-- Our Services Section -->
+  <div class="tree">
+    <div class="parent-node"><a href="#">Our Services</a></div>
+    <ul class="children">
+      <li><a href="website-development-service.html">Website Development</a></li>
+      <li><a href="software-development-service.html">Software Development</a></li>
+      <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+      <li><a href="website-revamp.html">Website Revamp</a></li>
+      <li><a href="app-design.html">App Design</a></li>
+      <li><a href="app-development.html">App Development</a></li>
+      <li><a href="website-audit.html">Website Audit</a></li>
+      <li><a href="ecommerce-store-development.html">E-commerce Store Development</a></li>
+      <li><a href="shopify-store-creation.html">Shopify Store Creation</a></li>
+      <li><a href="prototype-development.html">Prototype Development</a></li>
+      <li><a href="saas-development.html">SaaS Development</a></li>
+      <li><a href="dashboard-design-development.html">Dashboard Design & Development</a></li>
+      <li><a href="seo-service.html">SEO Service</a></li>
     </ul>
+  </div>
+
 </div>
-
-
-
 
  
 <!-- Footer -->
